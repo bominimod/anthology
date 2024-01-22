@@ -1,0 +1,70 @@
+.title_wrap {
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 div {
+    line-height: 6rem;
+}
+h1 div:nth-child(1) {
+    font-size:8rem;
+    font-weight: 900;
+}
+h1 div:nth-child(2) {
+    font-size:4.5rem;
+    font-weight: 100;
+}
+h1 div:nth-child(3) {
+    font-size:5rem;
+    font-weight: 700;
+    margin-top:3rem;
+}
+
+body {
+    background: radial-gradient(rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  }
+  
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+  }
+  
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 6400px;
+    top: -198px;
+    left: 0;
+    height: 198px;
+    transform: translate(0, 0, 0);
+    animation: wave 7s ease infinite;
+  }
+  
+  .wave:nth-of-type(2) {
+    top: -168px;
+    animation: swell 4s ease infinite;
+    opacity: 1;
+  }
+  
+  @keyframes wave {
+    0% { margin-left: 0; }
+    100% { margin-left: -1600px;}
+  }
+  @keyframes swell {
+    0%, 100% {
+      transform: translate(0, -30px);
+    }
+    50% {
+      transform: translate(0, 5px);
+    }
+  }

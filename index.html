@@ -1,5 +1,64 @@
-<html>
-  <body>
-    <h1>portfolio</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anthology :: BOMIN PORTFOLIO">
+  <meta property="og:site_name" content="Anthology :: BOMIN PORTFOLIO">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="https://bominimod.github.io/anthology/">
+  <!-- <link rel="shortcut icon" href=""> -->
+  <title>Anthology :: BOMIN PORTFOLIO</title>
+  <link rel="canonical" href="https://bominimod.github.io/anthology/">
+  <!-- font 호출 S -->
+  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+  <!-- font 호출 E -->
+  <!-- css 호출 S -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <!-- css 호출 E -->
+  <!-- js 호출 S -->
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <!-- js 호출 E -->
+</head>
+<body>
+    <div class="title_wrap">
+        <h1>
+            <div>PORTFOLIO</div>
+            <div>web publisher</div>
+            <div>KIM BOMIN</div>
+        </h1>
+    </div>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave wave2"></div>
+      </div>
+</body>
 </html>
+<script>
+  $(document).ready(function () {
+
+
+    // 현재 폰트 사이즈
+    var fontSize = parseInt($( 'html' ).css( 'font-size' ));
+    console.log(fontSize);
+
+    $(window).on('resize', function () {
+        var holdWidth = $(window).width();
+        if (holdWidth < 1024) {
+            newFontSize = (fontSize / 1024) * $(window).width();
+            $("html").css("font-size", newFontSize)   
+
+            // newPercentage = (($(window).width() / holdWidth) * 100) + "%";
+            // $("html").css("font-size", newPercentage)
+            // console.log('newFontSize',newFontSize)
+        }
+    });
+
+
+  });
+</script>
